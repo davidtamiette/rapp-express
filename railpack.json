@@ -1,0 +1,9 @@
+{
+    "steps": {
+        "install": {
+            "cmds": [
+                "bun install"
+            ]
+        }
+    }
+}
