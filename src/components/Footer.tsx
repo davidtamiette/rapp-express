@@ -5,7 +5,9 @@ const Footer = () => (
   <footer className="bg-foreground py-12">
     <div className="container mx-auto px-4 space-y-6">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-        <img src={logo} alt="Ápia Ambiental" className="h-10 brightness-200 object-contain" />
+        <div className="bg-card rounded-lg px-4 py-2 inline-block">
+          <img src={logo} alt="Ápia Ambiental" className="h-10 object-contain" />
+        </div>
         <div className="flex flex-wrap items-center gap-6 text-sm text-muted">
           <a href="mailto:atendimento@apiaambiental.com.br" className="flex items-center gap-2 hover:text-accent transition-colors">
             <Mail className="w-4 h-4" /> atendimento@apiaambiental.com.br

@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "O que acontece se eu não entregar o RAPP?",
-    a: "A empresa fica irregular perante o Ibama, podendo sofrer multas, notificações e problemas com licenciamento ambiental.",
+    a: "A empresa fica irregular perante o Ibama, podendo sofrer multas, notificações e problemas com licenciamento ambiental. Além disso, sem o RAPP entregue, não é possível atualizar o Certificado de Regularidade do CTF.",
   },
   {
     q: "A Ápia também ajuda com CTF/APP e outras obrigações ambientais?",
