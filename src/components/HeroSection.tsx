@@ -27,10 +27,7 @@ const HeroSection = () => {
         <div className="container mx-auto px-4 pt-28 pb-16 grid lg:grid-cols-5 gap-10 items-center">
           {/* Left content – 3 cols */}
           <div className="lg:col-span-3 space-y-6">
-            {/* Urgency badge */}
-            <div className="inline-block bg-urgent/90 text-urgent-foreground text-sm font-semibold px-4 py-2 rounded-full animate-pulse-urgent">
-              ⚠️ Prazo do RAPP: 1º de fevereiro a 31 de março
-            </div>
+            {/* Removed urgency badge since it's global now */}
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-primary-foreground">
               Seu RAPP entregue no prazo,{" "}
