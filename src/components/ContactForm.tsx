@@ -1,16 +1,30 @@
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
     nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "",
     segmento: "", ctf: "", rappAnterior: "", mensagem: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Formulário enviado com sucesso! Um especialista entrará em contato em breve.");
-    setForm({ nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "", segmento: "", ctf: "", rappAnterior: "", mensagem: "" });
+    setLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: { formType: "contact", data: form },
+      });
+      if (error) throw error;
+      toast.success("Formulário enviado com sucesso! Um especialista entrará em contato em breve.");
+      setForm({ nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "", segmento: "", ctf: "", rappAnterior: "", mensagem: "" });
+    } catch (err) {
+      console.error(err);
+      toast.error("Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const set = (key: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
@@ -87,8 +101,8 @@ const ContactForm = () => {
             <textarea className={`${inputClass} min-h-[100px] resize-y`} value={form.mensagem} onChange={set("mensagem")} />
           </div>
 
-          <button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3.5 rounded-lg transition-colors text-base">
-            Enviar solicitação
+          <button type="submit" disabled={loading} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3.5 rounded-lg transition-colors text-base disabled:opacity-50">
+            {loading ? "Enviando..." : "Enviar solicitação"}
           </button>
         </form>
       </div>
