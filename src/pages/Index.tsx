@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import WhatIsRapp from "@/components/WhatIsRapp";
+import WhyApia from "@/components/WhyApia";
+import ProcessSteps from "@/components/ProcessSteps";
+import SocialProof from "@/components/SocialProof";
+import FaqSection from "@/components/FaqSection";
+import FinalCta from "@/components/FinalCta";
+import ContactForm from "@/components/ContactForm";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main>
+      <HeroSection />
+      <WhatIsRapp />
+      <WhyApia />
+      <ProcessSteps />
+      <SocialProof />
+      <FaqSection />
+      <FinalCta />
+      <ContactForm />
+      <Footer />
+      <WhatsAppFloat />
+    </main>
   );
 };
 
