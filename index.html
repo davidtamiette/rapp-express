@@ -2,6 +2,28 @@
 <html lang="pt-BR">
 
 <head>
+  <script>
+    // Defina dataLayer e a função gtag
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Defina o consentimento padrão para regiões específicas de acordo com seus requisitos
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'regions': ['BR']
+    });
+
+    // Defina o consentimento padrão para todas as outras regiões de acordo com seus requisitos
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+  </script>
   <script src="https://cdn.cookiehub.eu/c2/9c1cde48.js"></script>
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function (event) {
