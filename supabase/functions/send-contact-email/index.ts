@@ -65,7 +65,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "RAPP Ápia <onboarding@resend.dev>",
+        from: "RAPP Apia <onboarding@resend.dev>",
         to: ["davidtamiette13@gmail.com"],
         subject,
         html: htmlBody,
