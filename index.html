@@ -28,7 +28,9 @@
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function (event) {
       var cpm = {};
-      window.cookiehub.load(cpm);
+      if (window.cookiehub) {
+        window.cookiehub.load(cpm);
+      }
     });
   </script>
   <!-- Google Tag Manager -->
