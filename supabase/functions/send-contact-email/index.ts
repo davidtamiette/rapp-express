@@ -66,7 +66,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "RAPP Apia <onboarding@resend.dev>",
-        to: ["davidtamiette13@gmail.com"],
+        to: ["atendimento@apiaambiental.com.br"],
         subject,
         html: htmlBody,
       }),
