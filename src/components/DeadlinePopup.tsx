@@ -9,7 +9,7 @@ const DeadlinePopup = () => {
   useEffect(() => {
     // Verifica se o usuário já viu o popup na sessão/visita atual
     const hasSeenPopup = localStorage.getItem("rappPopupSeen");
-    
+
     if (!hasSeenPopup) {
       // Pequeno delay para não ser tão agressivo assim que a página carrega
       const timer = setTimeout(() => setOpen(true), 1500);
@@ -34,27 +34,27 @@ const DeadlinePopup = () => {
             A entrega do <strong>Relatório Anual de Atividades Potencialmente Poluidoras (RAPP)</strong> é obrigatória e deve ser feita o quanto antes para evitar multas processuais.
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="bg-urgent/10 p-4 rounded-lg my-2 flex items-start gap-3">
           <Clock className="w-5 h-5 text-urgent mt-0.5 shrink-0" />
           <p className="text-sm font-medium text-foreground">
-            O período legal de entrega é de <strong>1º de fevereiro a 31 de março</strong>. <br/>Não deixe para a última hora!
+            O período legal de entrega é de <strong>1º de fevereiro a 31 de março</strong>. <br />Não deixe para a última hora!
           </p>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row gap-3 sm:justify-end mt-4">
           <Button type="button" variant="outline" onClick={handleClose}>
             Entendi
           </Button>
-          <Button 
-            type="button" 
-            className="bg-primary hover:bg-primary/90 text-white" 
+          <Button
+            type="button"
+            className="bg-primary hover:bg-primary/90 text-white"
             onClick={() => {
               handleClose();
               document.getElementById("formulario")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Fazer orçamento gora
+            Fazer orçamento agora
           </Button>
         </div>
       </DialogContent>
