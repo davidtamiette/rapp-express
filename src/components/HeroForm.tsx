@@ -14,6 +14,9 @@ const HeroForm = () => {
         body: { formType: "hero", data: form },
       });
       if (error) throw error;
+      if (typeof (window as any).gtag !== "undefined") {
+        (window as any).gtag("event", "conversion", { "send_to": "AW-17854102222/ALnuCLuL-_8bEM71v8FC", "value": 1.0, "currency": "BRL" });
+      }
       toast.success("Solicitação enviada! Entraremos em contato em breve.");
       setForm({ nome: "", email: "", telefone: "", empresa: "", uf: "" });
     } catch (err) {

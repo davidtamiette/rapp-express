@@ -17,6 +17,9 @@ const ContactForm = () => {
         body: { formType: "contact", data: form },
       });
       if (error) throw error;
+      if (typeof (window as any).gtag !== "undefined") {
+        (window as any).gtag("event", "conversion", { "send_to": "AW-17854102222/ALnuCLuL-_8bEM71v8FC", "value": 1.0, "currency": "BRL" });
+      }
       toast.success("Formulário enviado com sucesso! Um especialista entrará em contato em breve.");
       setForm({ nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "", segmento: "", ctf: "", rappAnterior: "", mensagem: "" });
     } catch (err) {
