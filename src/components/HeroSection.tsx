@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full">
         {/* Header */}
-        <header className="absolute top-0 left-0 right-0 py-5 px-4 md:px-8">
+        <header className="absolute top-20 sm:top-16 md:top-14 left-0 right-0 py-5 px-4 md:px-8">
           <div className="bg-card rounded-lg px-4 py-2 inline-block">
             <img src={logo} alt="Ápia Ambiental" className="h-12 md:h-16 object-contain" />
           </div>
