@@ -14,7 +14,7 @@ const WhatIsRapp = () => (
           (Cadastro Técnico Federal de Atividades Potencialmente Poluidoras).
         </p>
         <p>
-          O prazo de entrega vai de <strong className="text-foreground">1º de fevereiro a 31 de março</strong>,
+          O prazo de entrega vai de <strong className="text-foreground">1º de fevereiro a 31 de maio</strong>,
           referente ao ano-base anterior. A não entrega ou a entrega fora do prazo pode gerar{" "}
           <strong className="text-foreground">multas e problemas com o Ibama</strong> e com as licenças ambientais
           da empresa.

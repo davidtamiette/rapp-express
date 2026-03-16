@@ -8,6 +8,12 @@ const WHATSAPP_URL =
   "https://wa.me/5531982782918?text=Ol%C3%A1%2C%20vim%20pelo%20an%C3%BAncio%20e%20preciso%20de%20ajuda%20com%20o%20RAPP";
 
 const HeroSection = () => {
+  const handleWhatsAppClick = () => {
+    if (typeof (window as any).gtag !== "undefined") {
+      (window as any).gtag("event", "conversion", { "send_to": "AW-17854102222/ALnuCLuL-_8bEM71v8FC", "value": 1.0, "currency": "BRL" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* BG image */}
@@ -63,6 +69,7 @@ const HeroSection = () => {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={handleWhatsAppClick}
                 className="inline-flex items-center justify-center gap-2 bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -76,7 +83,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right – quick form – 2 cols */}
-          <div className="lg:col-span-2 hidden lg:block">
+          <div className="lg:col-span-2 mt-8 lg:mt-0">
             <HeroForm />
           </div>
         </div>

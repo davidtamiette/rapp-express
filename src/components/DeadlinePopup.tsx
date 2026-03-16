@@ -38,7 +38,7 @@ const DeadlinePopup = () => {
         <div className="bg-urgent/10 p-4 rounded-lg my-2 flex items-start gap-3">
           <Clock className="w-5 h-5 text-urgent mt-0.5 shrink-0" />
           <p className="text-sm font-medium text-foreground">
-            O período legal de entrega é de <strong>1º de fevereiro a 31 de março</strong>. <br />Não deixe para a última hora!
+            O período legal de entrega é de <strong>1º de fevereiro a 31 de maio</strong>. <br />Não deixe para a última hora!
           </p>
         </div>
 

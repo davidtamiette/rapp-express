@@ -7,9 +7,9 @@ const Countdown = () => {
     const calculateTarget = () => {
       const now = new Date();
       let year = now.getFullYear();
-      let target = new Date(year, 2, 31, 23, 59, 59); // March 31
+      let target = new Date(year, 4, 31, 23, 59, 59); // May 31
       if (now > target) {
-        target = new Date(year + 1, 2, 31, 23, 59, 59);
+        target = new Date(year + 1, 4, 31, 23, 59, 59);
       }
       return target;
     };

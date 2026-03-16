@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     q: "Até quando posso entregar o RAPP deste ano?",
-    a: "O prazo vai de 1º de fevereiro a 31 de março de cada ano, salvo eventual prorrogação oficial do Ibama.",
+    a: "O prazo vai de 1º de fevereiro a 31 de maio de cada ano, salvo eventual prorrogação oficial do Ibama.",
   },
   {
     q: "O que acontece se eu não entregar o RAPP?",

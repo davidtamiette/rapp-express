@@ -4,8 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
-    nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "",
-    segmento: "", ctf: "", rappAnterior: "", mensagem: "",
+    nome: "", email: "", telefone: "", empresa: "", uf: "", mensagem: "",
   });
   const [loading, setLoading] = useState(false);
 
@@ -21,7 +20,7 @@ const ContactForm = () => {
         (window as any).gtag("event", "conversion", { "send_to": "AW-17854102222/ALnuCLuL-_8bEM71v8FC", "value": 1.0, "currency": "BRL" });
       }
       toast.success("Formulário enviado com sucesso! Um especialista entrará em contato em breve.");
-      setForm({ nome: "", email: "", telefone: "", empresa: "", cnpj: "", uf: "", segmento: "", ctf: "", rappAnterior: "", mensagem: "" });
+      setForm({ nome: "", email: "", telefone: "", empresa: "", uf: "", mensagem: "" });
     } catch (err) {
       console.error(err);
       toast.error("Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
@@ -65,37 +64,8 @@ const ContactForm = () => {
               <input className={inputClass} required value={form.empresa} onChange={set("empresa")} />
             </div>
             <div>
-              <label className={labelClass}>CNPJ</label>
-              <input className={inputClass} value={form.cnpj} onChange={set("cnpj")} />
-            </div>
-            <div>
               <label className={labelClass}>Estado (UF)</label>
               <input className={inputClass} maxLength={2} value={form.uf} onChange={(e) => setForm({ ...form, uf: e.target.value.toUpperCase() })} />
-            </div>
-          </div>
-
-          <div>
-            <label className={labelClass}>Segmento de atuação</label>
-            <input className={inputClass} value={form.segmento} onChange={set("segmento")} />
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label className={labelClass}>Já possui CTF/APP?</label>
-              <select className={inputClass} value={form.ctf} onChange={set("ctf")}>
-                <option value="">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-                <option value="nao_sei">Não sei</option>
-              </select>
-            </div>
-            <div>
-              <label className={labelClass}>Já entregou RAPP antes?</label>
-              <select className={inputClass} value={form.rappAnterior} onChange={set("rappAnterior")}>
-                <option value="">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
             </div>
           </div>
 
