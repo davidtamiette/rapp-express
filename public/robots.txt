@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://apiaambiental.com.br/rapp/sitemap.xml
