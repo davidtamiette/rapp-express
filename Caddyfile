@@ -1,5 +1,16 @@
 :{$PORT:3000} {
     root * /app/dist
+    
+    @assets {
+        path /assets/*
+    }
+    header @assets Cache-Control "public, max-age=31536000, immutable"
+
+    @public {
+        path /*.ico /*.svg /*.xml /*.txt
+    }
+    header @public Cache-Control "public, max-age=86400"
+
     file_server
     try_files {path} /index.html
     encode gzip
